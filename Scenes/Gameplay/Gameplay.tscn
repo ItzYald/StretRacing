@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn7sy43ikid8f"]
+
+[ext_resource type="Script" path="res://Scenes/Gameplay/PlayerCarSprite.cs" id="1_j27tc"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="PlayerCar" type="Sprite2D" parent="."]
+script = ExtResource("1_j27tc")
