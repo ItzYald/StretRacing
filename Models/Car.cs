@@ -49,6 +49,8 @@ namespace NewCar.Models
             isStarted = false;
         }
 
+        public int getPixelDistance() => (int)(distance / 60f * 23f);
+        public int getRealDistance() => (int)(distance * 0.0046296f);
         public int getDistance() => distance;
         public int getSpeed() => (int)speed;
         public int getRpm() => engine.rpm;
