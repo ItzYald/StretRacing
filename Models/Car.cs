@@ -11,13 +11,11 @@ namespace NewCar.Models
 {
     internal class Car : Nextable
     {
-        List<Nextable> nextables;
-
         Engine engine;
 
         CarSpecifications specifications;
 
-        int distance;
+        float distance;
         float speed;
 
         float[] numbersOfTransmission;
@@ -30,12 +28,10 @@ namespace NewCar.Models
 
         public int MaxRpm { get { return engine.MaxRpm; } }
 
-        const float powerK = 400000000f;
+        const float powerK = 6666666.6f;
 
         public Car(CarSpecifications specifications)
         {
-            nextables = new List<Nextable>();
-
             distance = 0;
             speed = 0;
 
@@ -49,11 +45,11 @@ namespace NewCar.Models
             isStarted = false;
         }
 
-        public int getPixelDistance() => (int)(distance / 60f * 23f);
-        public int getRealDistance() => (int)(distance * 0.0046296f);
-        public int getDistance() => distance;
+        public float getPixelDistance() => (distance / 60f * 23f);
+        public float getRealDistance() => (distance * 0.0046296f);
+        public float getDistance() => distance;
         public int getSpeed() => (int)speed;
-        public int getRpm() => engine.rpm;
+        public float getRpm() => engine.rpm;
         public int getTransmissionNumber() => transmissionNumber + 1;
         public float getTransmission() => numbersOfTransmission[transmissionNumber];
         public void Start()
@@ -90,15 +86,16 @@ namespace NewCar.Models
                 transmissionNumber -= 1;
             }
         }
-        public void Accel()
+        public void Accel(double delta)
         {
             engine.rpm +=
-                (int)((-1 * engine.rpm * engine.rpm + 2 * engine.MaxRpm * engine.rpm) / powerK * engine.Power * numbersOfTransmission[transmissionNumber]);
+                (float)delta * (-1 * engine.rpm * engine.rpm + 2 * engine.MaxRpm * engine.rpm)
+                / powerK * engine.Power * numbersOfTransmission[transmissionNumber];
         }
 
-        public void Move()
+        public void Move(double delta)
         {
-            Accel();
+            Accel(delta);
             if (engine.rpm < 500)
             {
                 engine.isStart = false;
@@ -109,31 +106,27 @@ namespace NewCar.Models
             {
                 if (engine.rpm > engine.MaxRpm * 1.05f)
                 {
-                    engine.rpm -= (int)(300 * numbersOfTransmission[transmissionNumber] * Math.Pow(engine.rpm - engine.MaxRpm, 0.89) / (engine.MaxRpm * 1.05f - engine.MaxRpm));
+                    engine.rpm -= (float)(300 * numbersOfTransmission[transmissionNumber] * Math.Pow(engine.rpm - engine.MaxRpm, 0.89) / (engine.MaxRpm * 1.05f - engine.MaxRpm));
                 }
-                engine.rpm += (int)(0.5f * numbersOfTransmission[transmissionNumber]);
+                engine.rpm += (0.5f * numbersOfTransmission[transmissionNumber]);
             }
 
-            engine.rpm -= (int)(speed * Constants.airResistance * numbersOfTransmission[transmissionNumber]);
+            engine.rpm -= (speed * Constants.airResistance * numbersOfTransmission[transmissionNumber]);
 
             if (engine.rpm < 0)
             {
                 engine.rpm = 0;
             }
 
-            speed = engine.rpm / 60f / numbersOfTransmission[transmissionNumber];
+            speed = engine.rpm / numbersOfTransmission[transmissionNumber] * (float)delta;
 
-            distance += (int)speed;
+            distance += (float)(speed * delta * 60);
         }
 
-        public void Next()
+        public void Next(double delta)
         {
             if (!isStarted) return;
-            Move();
-            foreach (Nextable nextable in nextables)
-            {
-                nextable.Next();
-            }
+            Move(delta);
         }
 
     }

@@ -8,6 +8,6 @@ namespace StreetRacing
 {
     internal interface Nextable
     {
-        public void Next();
+        public void Next(double delta);
     }
 }

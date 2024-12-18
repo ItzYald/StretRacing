@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StreetRacing.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +12,13 @@ namespace NewCar.Models
         public static CarSpecifications playerCarSpecifications;
         public static CarSpecifications botCarSpecifications;
 
-        public static Car playerCar;
-        public static Car botCar;
+        public static GameplayModel gameplayModel;
 
         static MainModel()
         {
             playerCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
             botCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
-            playerCar = new Car(playerCarSpecifications);
-            botCar = new Car(botCarSpecifications);
-
+            gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications);
         }
 
 

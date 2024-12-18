@@ -9,19 +9,19 @@ public partial class BotCarSprite : Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		MainModel.botCar.Start();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Position = new Vector2(MainModel.botCar.getPixelDistance() - MainModel.playerCar.getPixelDistance() + 160, Position.Y);
-        if (!MainModel.botCar.IsStarted) return;
-		MainModel.botCar.Next();
-        if (MainModel.botCar.getRpm() > MainModel.botCar.MaxRpm * 0.91)
+		Position = new Vector2(MainModel.gameplayModel.botCar.getPixelDistance() - MainModel.gameplayModel.playerCar.getPixelDistance() + 250, Position.Y);
+		if (!MainModel.gameplayModel.isGameplay) return;
+
+        if (!MainModel.gameplayModel.botCar.IsStarted) return;
+		MainModel.gameplayModel.botCar.Next(delta);
+        if (MainModel.gameplayModel.botCar.getRpm() > MainModel.gameplayModel.botCar.MaxRpm * 0.91)
         {
-            MainModel.botCar.TransmissionUp();
+            MainModel.gameplayModel.botCar.TransmissionUp();
         }
-		GD.Print(MainModel.botCar.getSpeed());
     }
 }

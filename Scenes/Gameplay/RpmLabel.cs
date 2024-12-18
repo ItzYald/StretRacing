@@ -12,6 +12,6 @@ public partial class RpmLabel : Label
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-        Text = "Rpm: " + MainModel.playerCar.getRpm().ToString();
+        Text = "Rpm: " + ((int)MainModel.gameplayModel.playerCar.getRpm()).ToString();
     }
 }

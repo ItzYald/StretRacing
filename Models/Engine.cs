@@ -8,7 +8,7 @@ namespace NewCar.Models
 {
     internal class Engine
     {
-        public int rpm;
+        public float rpm;
         EngineSpecifications specifications;
         public bool isStart;
 

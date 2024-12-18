@@ -12,6 +12,6 @@ public partial class SpeedLabel : Label
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Text = "Speed: " + MainModel.playerCar.getSpeed().ToString();
+		Text = "Speed: " + MainModel.gameplayModel.playerCar.getSpeed().ToString();
 	}
 }
