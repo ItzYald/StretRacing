@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn7sy43ikid8f"]
+[gd_scene load_steps=12 format=3 uid="uid://cn7sy43ikid8f"]
 
 [ext_resource type="Texture2D" uid="uid://dlwafpoc3hjl6" path="res://Assets/Images/Car1.png" id="1_el5gr"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/PlayerCarSprite.cs" id="1_j27tc"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Scenes/Gameplay/WinGui.cs" id="7_l1hi3"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/RestartButton.cs" id="8_al7xn"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/TimerLabel.cs" id="9_33e1o"]
+[ext_resource type="Script" path="res://Scenes/Gameplay/LoseGui.cs" id="9_k0hel"]
+[ext_resource type="Script" path="res://Scenes/Gameplay/RealDistanceLabel.cs" id="10_7w7p6"]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -25,10 +27,11 @@ texture = ExtResource("1_el5gr")
 script = ExtResource("3_ctfww")
 
 [node name="SpeedLabel" type="Label" parent="."]
-offset_left = 30.0
-offset_top = 10.0
-offset_right = 203.0
-offset_bottom = 52.0
+offset_left = 300.0
+offset_top = 450.0
+offset_right = 473.0
+offset_bottom = 492.0
+scale = Vector2(1, 0.957952)
 theme_override_font_sizes/font_size = 30
 text = "Speed: 1000"
 script = ExtResource("3_54oks")
@@ -67,10 +70,11 @@ color = Color(0.92549, 0, 0, 1)
 script = ExtResource("4_xr315")
 
 [node name="WinGui" type="ColorRect" parent="."]
+visible = false
 offset_left = 488.0
-offset_top = 154.0
+offset_top = 160.0
 offset_right = 792.0
-offset_bottom = 408.0
+offset_bottom = 414.0
 color = Color(0, 0.466667, 0.560784, 1)
 script = ExtResource("7_l1hi3")
 
@@ -84,16 +88,16 @@ color = Color(0, 0.192157, 0.247059, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="WinGui"]
 layout_mode = 0
-offset_left = 75.0
+offset_left = 41.0
 offset_top = 15.0
-offset_right = 225.0
+offset_right = 261.0
 offset_bottom = 195.0
 theme_override_constants/separation = 12
 
-[node name="Label" type="Label" parent="WinGui/VBoxContainer"]
+[node name="WinLabel" type="Label" parent="WinGui/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 35
-text = "Победа"
+theme_override_font_sizes/font_size = 30
+text = "Вы победили"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -109,11 +113,72 @@ theme_override_font_sizes/font_size = 30
 text = "Menu"
 script = ExtResource("8_al7xn")
 
+[node name="LoseGui" type="ColorRect" parent="."]
+offset_left = 488.0
+offset_top = 160.0
+offset_right = 792.0
+offset_bottom = 414.0
+color = Color(0, 0.466667, 0.560784, 1)
+script = ExtResource("9_k0hel")
+
+[node name="LoseGuiBackGround" type="ColorRect" parent="LoseGui"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 302.0
+offset_bottom = 252.0
+color = Color(0, 0.192157, 0.247059, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LoseGui"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 15.0
+offset_right = 261.0
+offset_bottom = 195.0
+theme_override_constants/separation = 12
+
+[node name="LoseLabel" type="Label" parent="LoseGui/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Вы проиграли"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="LoseGui/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Restart"
+script = ExtResource("8_al7xn")
+
+[node name="MenuButton" type="Button" parent="LoseGui/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+script = ExtResource("8_al7xn")
+
 [node name="TimerLabel" type="Label" parent="."]
 offset_left = 620.0
-offset_top = 24.0
+offset_top = 50.0
 offset_right = 660.0
-offset_bottom = 87.0
+offset_bottom = 113.0
+scale = Vector2(1.00396, 1.10721)
 theme_override_font_sizes/font_size = 45
 text = "3"
 script = ExtResource("9_33e1o")
+
+[node name="DistanceRect" type="ColorRect" parent="."]
+offset_left = 440.0
+offset_top = 30.0
+offset_right = 840.0
+offset_bottom = 40.0
+scale = Vector2(1, 0.518849)
+color = Color(0, 0.192157, 0.247059, 1)
+
+[node name="RealDistanceLabel" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 240.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 30
+text = "Distance: 1000"
+script = ExtResource("10_7w7p6")

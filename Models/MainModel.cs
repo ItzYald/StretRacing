@@ -18,7 +18,7 @@ namespace NewCar.Models
         {
             playerCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
             botCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
-            gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications);
+            gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications, 200);
         }
 
 

@@ -12,11 +12,19 @@ namespace StreetRacing.Models
         public bool timer;
         public bool isGameplay;
         public bool playerWin;
+        public bool botWin;
         public Car playerCar;
         public Car botCar;
 
-        public GameplayModel(CarSpecifications playerCarSpectifications, CarSpecifications botCarSpecifications)
+        public int thisDistance;
+
+        public GameplayModel(CarSpecifications playerCarSpectifications, CarSpecifications botCarSpecifications, int thisDistance)
         {
+            this.thisDistance = thisDistance;
+
+            botWin = false;
+            playerWin = false;
+
             timer = false;
             isGameplay = true;
             playerCar = new Car(playerCarSpectifications);
@@ -37,17 +45,26 @@ namespace StreetRacing.Models
             timer = false;
         }
 
+        public void BotWin()
+        {
+            botWin = true;
+            isGameplay = false;
+            timer = false;
+        }
+
         public void Start()
         {
             timer = false;
             isGameplay = true;
             playerWin = false;
+            botWin = false;
             playerCar.Start();
             botCar.Start();
         }
         public void Stop()
         {
             playerWin = false;
+            botWin = false;
             playerCar.Stop();
             botCar.Stop();
         }

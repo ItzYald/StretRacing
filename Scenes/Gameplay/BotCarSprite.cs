@@ -6,22 +6,29 @@ using System.Runtime.ConstrainedExecution;
 
 public partial class BotCarSprite : Sprite2D
 {
+    Car botCar;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-	}
+        botCar = MainModel.gameplayModel.botCar;
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Position = new Vector2(MainModel.gameplayModel.botCar.getPixelDistance() - MainModel.gameplayModel.playerCar.getPixelDistance() + 250, Position.Y);
+		Position = new Vector2(botCar.getPixelDistance() - MainModel.gameplayModel.playerCar.getPixelDistance() + 250, Position.Y);
 		if (!MainModel.gameplayModel.isGameplay) return;
 
-        if (!MainModel.gameplayModel.botCar.IsStarted) return;
-		MainModel.gameplayModel.botCar.Next(delta);
-        if (MainModel.gameplayModel.botCar.getRpm() > MainModel.gameplayModel.botCar.MaxRpm * 0.91)
+        if (botCar.getRealDistance() >= MainModel.gameplayModel.thisDistance)
         {
-            MainModel.gameplayModel.botCar.TransmissionUp();
+            MainModel.gameplayModel.BotWin();
+        }
+
+        if (!botCar.IsStarted) return;
+		botCar.Next(delta);
+        if (botCar.getRpm() > botCar.MaxRpm * 0.91)
+        {
+            botCar.TransmissionUp();
         }
     }
 }
