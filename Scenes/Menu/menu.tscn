@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://4siw5ijvtvih"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/GameplayButton.cs" id="1_m4che"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rectangle" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 160.0
+offset_right = 792.0
+offset_bottom = 414.0
+color = Color(0, 0.466667, 0.560784, 1)
+
+[node name="RectBackground" type="ColorRect" parent="Rectangle"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 302.0
+offset_bottom = 252.0
+color = Color(0, 0.192157, 0.247059, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rectangle"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 15.0
+offset_right = 261.0
+offset_bottom = 195.0
+theme_override_constants/separation = 12
+
+[node name="StreetRacingLabel" type="Label" parent="Rectangle/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Street Racing
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameplayButton" type="Button" parent="Rectangle/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Играть"
+script = ExtResource("1_m4che")
+
+[node name="MenuButton" type="Button" parent="Rectangle/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Выйти
+"

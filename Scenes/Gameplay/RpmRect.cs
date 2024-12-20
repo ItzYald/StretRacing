@@ -12,6 +12,7 @@ public partial class RpmRect : ColorRect
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Size = new Vector2(250f * (MainModel.gameplayModel.playerCar.getRpm() / (float)MainModel.gameplayModel.playerCar.MaxRpm / 1.1f), Size.Y);
-	}
+        //Size = new Vector2(250f * (MainModel.gameplayModel.playerCar.getRpm() / (float)MainModel.gameplayModel.playerCar.MaxRpm / 1.1f), Size.Y);
+        RotationDegrees = MainModel.gameplayModel.playerCar.getRpm() / 40f + 170;
+    }
 }
