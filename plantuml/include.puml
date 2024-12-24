@@ -1,0 +1,25 @@
+@startuml
+!include .\\Constants.puml
+!include .\\Nextable.puml
+!include .\\Models\EngineSpecifications.puml
+!include .\\Models\CarSpecifications.puml
+!include .\\Models\Engine.puml
+!include .\\Models\Car.puml
+!include .\\Models\GameplayModel.puml
+!include .\\Models\MainModel.puml
+!include .\\Scenes\Gameplay\RestartButton.puml
+!include .\\Scenes\Gameplay\WinGui.puml
+!include .\\Scenes\Gameplay\RpmLabel.puml
+!include .\\Scenes\Gameplay\BotCarSprite.puml
+!include .\\Scenes\Gameplay\PlayerCarSprite.puml
+!include .\\Scenes\Gameplay\TimerLabel.puml
+!include .\\Scenes\Gameplay\RealDistanceLabel.puml
+!include .\\Scenes\Gameplay\LoseGui.puml
+!include .\\Scenes\Gameplay\BackToMenuButton.puml
+!include .\\Scenes\Gameplay\RpmRect.puml
+!include .\\Scenes\Gameplay\SpeedLabel.puml
+!include .\\Scenes\Menu\GameplayButton.puml
+!include .\\Scenes\Menu\GarageButton.puml
+!include .\\.godot\mono\temp\obj\Debug\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.godot\mono\temp\obj\Debug\Street Racing.AssemblyInfo.puml
+@enduml

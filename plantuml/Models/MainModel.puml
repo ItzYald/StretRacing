@@ -1,0 +1,7 @@
+@startuml
+class MainModel <<static>> {
+}
+MainModel --> "playerCarSpecifications" CarSpecifications
+MainModel --> "botCarSpecifications" CarSpecifications
+MainModel --> "gameplayModel" GameplayModel
+@enduml

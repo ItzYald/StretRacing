@@ -1,0 +1,22 @@
+@startuml
+class Car {
+    + IsStarted : bool <<get>>
+    + MaxRpm : int <<get>>
+    + Car(specifications:CarSpecifications)
+    + getPixelDistance() : float
+    + getRealDistance() : float
+    + getDistance() : float
+    + getSpeed() : int
+    + getRpm() : float
+    + getTransmissionNumber() : int
+    + getTransmission() : float
+    + Start() : void
+    + Stop() : void
+    + TransmissionUp() : void
+    + TransmissionDown() : void
+    + Accel(delta:double) : void
+    + Move(delta:double) : void
+    + Next(delta:double) : void
+}
+Nextable <|-- Car
+@enduml

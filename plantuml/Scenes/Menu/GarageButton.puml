@@ -1,0 +1,7 @@
+@startuml
+class GarageButton <<partial>> {
+    + <<override>> _Ready() : void
+    + <<override>> _Process(delta:double) : void
+}
+Button <|-- GarageButton
+@enduml

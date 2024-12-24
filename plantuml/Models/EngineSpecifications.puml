@@ -1,0 +1,7 @@
+@startuml
+struct EngineSpecifications {
+    + maxRpm : int
+    + power : int
+    + EngineSpecifications(power:int, maxRpm:int)
+}
+@enduml

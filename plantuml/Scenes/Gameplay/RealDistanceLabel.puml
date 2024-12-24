@@ -1,0 +1,7 @@
+@startuml
+class RealDistanceLabel <<partial>> {
+    + <<override>> _Ready() : void
+    + <<override>> _Process(delta:double) : void
+}
+Label <|-- RealDistanceLabel
+@enduml

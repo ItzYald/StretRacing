@@ -1,0 +1,11 @@
+@startuml
+class Engine {
+    + rpm : float
+    + isStart : bool
+    + MaxRpm : int <<get>>
+    + Power : int <<get>>
+    + Engine(specifications:EngineSpecifications, getTransmission:Func<float>)
+    + Start() : void
+    + Stop() : void
+}
+@enduml

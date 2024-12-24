@@ -1,0 +1,17 @@
+@startuml
+class GameplayModel {
+    + timer : bool
+    + isGameplay : bool
+    + playerWin : bool
+    + botWin : bool
+    + thisDistance : int
+    + GameplayModel(playerCarSpectifications:CarSpecifications, botCarSpecifications:CarSpecifications, thisDistance:int)
+    + TimerStart() : void
+    + PlayerWin() : void
+    + BotWin() : void
+    + Start() : void
+    + Stop() : void
+}
+GameplayModel --> "playerCar" Car
+GameplayModel --> "botCar" Car
+@enduml

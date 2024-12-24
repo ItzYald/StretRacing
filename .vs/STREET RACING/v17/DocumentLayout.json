@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\gameplay\\rpmlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\gameplay\\rpmlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\gameplay\\rpmrect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\gameplay\\rpmrect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\menu\\gameplaybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\menu\\gameplaybutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,20 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 195,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RpmLabel.cs",
-              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\RpmLabel.cs",
-              "RelativeDocumentMoniker": "Scenes\\Gameplay\\RpmLabel.cs",
-              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\RpmLabel.cs",
-              "RelativeToolTip": "Scenes\\Gameplay\\RpmLabel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T06:36:22.66Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -84,12 +75,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GameplayButton.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Menu\\GameplayButton.cs",
+              "RelativeDocumentMoniker": "Scenes\\Menu\\GameplayButton.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Menu\\GameplayButton.cs",
+              "RelativeToolTip": "Scenes\\Menu\\GameplayButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T10:13:08.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "RpmRect.cs",
               "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\RpmRect.cs",
               "RelativeDocumentMoniker": "Scenes\\Gameplay\\RpmRect.cs",
               "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\RpmRect.cs",
               "RelativeToolTip": "Scenes\\Gameplay\\RpmRect.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T06:32:45.756Z",
               "EditorCaption": ""

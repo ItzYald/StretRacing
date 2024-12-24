@@ -1,0 +1,8 @@
+@startuml
+class Constants {
+    + <<const>> windowWidth : int = 1280
+    + <<const>> windowHeight : int = 720
+    + <<const>> fieldSize : int = 400
+    + <<const>> airResistance : float = 0.09f
+}
+@enduml
