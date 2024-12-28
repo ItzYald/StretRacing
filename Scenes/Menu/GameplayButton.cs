@@ -8,7 +8,7 @@ public partial class GameplayButton : Button
 	{
         Pressed += () =>
         {
-            GetTree().ChangeSceneToFile("res://Scenes/Gameplay/Gameplay.tscn");
+            GetTree().ChangeSceneToFile("res://Scenes/ChooseCar/choose_car.tscn");
         };
     }
 

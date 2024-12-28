@@ -19,7 +19,7 @@ public partial class BotCarSprite : Sprite2D
 		Position = new Vector2(botCar.getPixelDistance() - MainModel.gameplayModel.playerCar.getPixelDistance() + 250, Position.Y);
 		if (!MainModel.gameplayModel.isGameplay) return;
 
-        if (botCar.getRealDistance() >= MainModel.gameplayModel.thisDistance)
+        if (botCar.getRealDistance() >= MainModel.gameplayModel.needDistance)
         {
             MainModel.gameplayModel.BotWin();
         }

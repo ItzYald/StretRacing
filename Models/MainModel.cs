@@ -9,6 +9,8 @@ namespace NewCar.Models
 {
     internal static class MainModel
     {
+        public static List<CarSpecifications> playerCarsSpecifications;
+
         public static CarSpecifications playerCarSpecifications;
         public static CarSpecifications botCarSpecifications;
 
@@ -16,9 +18,15 @@ namespace NewCar.Models
 
         static MainModel()
         {
+            playerCarsSpecifications = new List<CarSpecifications>();
+
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(200, 6500)));
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 7000)));
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 8000)));
+
             playerCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
             botCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
-            gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications, 200);
+            gameplayModel = new GameplayModel(playerCarsSpecifications[0], botCarSpecifications, 500);
         }
 
 

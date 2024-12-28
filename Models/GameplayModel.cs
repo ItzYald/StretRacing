@@ -16,11 +16,11 @@ namespace StreetRacing.Models
         public Car playerCar;
         public Car botCar;
 
-        public int thisDistance;
+        public int needDistance;
 
-        public GameplayModel(CarSpecifications playerCarSpectifications, CarSpecifications botCarSpecifications, int thisDistance)
+        public GameplayModel(CarSpecifications playerCarSpectifications, CarSpecifications botCarSpecifications, int needDistance)
         {
-            this.thisDistance = thisDistance;
+            this.needDistance = needDistance;
 
             botWin = false;
             playerWin = false;

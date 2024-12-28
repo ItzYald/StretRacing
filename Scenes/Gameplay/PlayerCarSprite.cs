@@ -19,7 +19,7 @@ public partial class PlayerCarSprite : Sprite2D
 	{
         if (!MainModel.gameplayModel.isGameplay) return;
 
-        if (playerCar.getRealDistance() >= MainModel.gameplayModel.thisDistance)
+        if (playerCar.getRealDistance() >= MainModel.gameplayModel.needDistance)
         {
             MainModel.gameplayModel.PlayerWin();
         }

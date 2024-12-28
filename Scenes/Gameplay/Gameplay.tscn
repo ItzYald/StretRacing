@@ -9,9 +9,9 @@
 [ext_resource type="Script" path="res://Scenes/Gameplay/WinGui.cs" id="7_l1hi3"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/RestartButton.cs" id="8_al7xn"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/TimerLabel.cs" id="9_33e1o"]
+[ext_resource type="Script" path="res://Scenes/Gameplay/MenuButton.cs" id="9_ieu0x"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/LoseGui.cs" id="9_k0hel"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/RealDistanceLabel.cs" id="10_7w7p6"]
-[ext_resource type="Script" path="res://Scenes/Gameplay/BackToMenuButton.cs" id="10_kn7cb"]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -99,7 +99,7 @@ script = ExtResource("8_al7xn")
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Menu"
-script = ExtResource("8_al7xn")
+script = ExtResource("9_ieu0x")
 
 [node name="LoseGui" type="ColorRect" parent="."]
 offset_left = 488.0
@@ -142,7 +142,7 @@ script = ExtResource("8_al7xn")
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Меню"
-script = ExtResource("10_kn7cb")
+script = ExtResource("9_ieu0x")
 
 [node name="TimerLabel" type="Label" parent="."]
 offset_left = 620.0
