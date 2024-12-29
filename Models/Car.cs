@@ -1,4 +1,5 @@
-﻿using StreetRacing;
+﻿using Godot;
+using StreetRacing;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -18,10 +19,6 @@ namespace NewCar.Models
         float distance;
         float speed;
 
-        float[] numbersOfTransmission;
-
-        int transmissionNumber;
-
         bool isStarted;
 
         public bool IsStarted { get { return isStarted; } }
@@ -39,9 +36,6 @@ namespace NewCar.Models
 
             engine = new Engine(this.specifications.engineSpecifications, getTransmission);
 
-            numbersOfTransmission = new float[] {3.8f, 2.2f, 1.3f, 0.9f, 0.5f};
-            transmissionNumber = 0;
-
             isStarted = false;
         }
 
@@ -50,12 +44,16 @@ namespace NewCar.Models
         public float getDistance() => distance;
         public int getSpeed() => (int)speed;
         public float getRpm() => engine.rpm;
-        public int getTransmissionNumber() => transmissionNumber + 1;
-        public float getTransmission() => numbersOfTransmission[transmissionNumber];
+        public int getTransmissionNumber() => specifications.transmission.number + 1;
+        public float getTransmission() => specifications.transmission.ratios[specifications.transmission.number];
+
         public void Start()
         {
+            //GD.Print(specifications.transmission.quantity);
+            //GD.Print(specifications.transmission.ratios.Count());
+            //GD.Print(" ");
             speed = 0;
-            transmissionNumber = 0;
+            specifications.transmission.number = 0;
             distance = 0;
             engine.Start();
             isStarted = true;
@@ -65,32 +63,34 @@ namespace NewCar.Models
         {
             distance = 0;
             speed = 0;
-            transmissionNumber = 0;
+            specifications.transmission.number = 0;
             isStarted = false;
             engine.Stop();
         }
 
         public void TransmissionUp()
         {
-            if (transmissionNumber + 1 < numbersOfTransmission.Count())
+            if (specifications.transmission.number + 1 < specifications.transmission.ratios.Count())
             {
-                transmissionNumber += 1;
-                engine.rpm = (int)(engine.rpm * (numbersOfTransmission[transmissionNumber] / numbersOfTransmission[transmissionNumber - 1]));
+                specifications.transmission.number += 1;
+                engine.rpm = (int)(engine.rpm * 
+                    (specifications.transmission.ratios[specifications.transmission.number]
+                    / specifications.transmission.ratios[specifications.transmission.number - 1]));
             }
         }
 
         public void TransmissionDown()
         {
-            if (transmissionNumber > 0)
+            if (specifications.transmission.number > 0)
             {
-                transmissionNumber -= 1;
+                specifications.transmission.number -= 1;
             }
         }
         public void Accel(double delta)
         {
             engine.rpm +=
                 (float)delta * (-1 * engine.rpm * engine.rpm + 2 * engine.MaxRpm * engine.rpm)
-                / powerK * engine.Power * numbersOfTransmission[transmissionNumber];
+                / powerK * engine.Power * specifications.transmission.ratios[specifications.transmission.number];
         }
 
         public void Move(double delta)
@@ -106,19 +106,21 @@ namespace NewCar.Models
             {
                 if (engine.rpm > engine.MaxRpm * 1.05f)
                 {
-                    engine.rpm -= (float)(300 * numbersOfTransmission[transmissionNumber] * Math.Pow(engine.rpm - engine.MaxRpm, 0.89) / (engine.MaxRpm * 1.05f - engine.MaxRpm));
+                    engine.rpm -= (float)
+                        (300 * specifications.transmission.ratios[specifications.transmission.number] *
+                        Math.Pow(engine.rpm - engine.MaxRpm, 0.89) / (engine.MaxRpm * 1.05f - engine.MaxRpm));
                 }
-                engine.rpm += (0.5f * numbersOfTransmission[transmissionNumber]);
+                engine.rpm += (0.5f * specifications.transmission.ratios[specifications.transmission.number]);
             }
 
-            engine.rpm -= (speed * Constants.airResistance * numbersOfTransmission[transmissionNumber]);
+            engine.rpm -= (speed * Constants.airResistance * specifications.transmission.ratios[specifications.transmission.number]);
 
             if (engine.rpm < 0)
             {
                 engine.rpm = 0;
             }
 
-            speed = engine.rpm / numbersOfTransmission[transmissionNumber] * (float)delta;
+            speed = engine.rpm / specifications.transmission.ratios[specifications.transmission.number] * (float)delta;
 
             distance += (float)(speed * delta * 60);
         }

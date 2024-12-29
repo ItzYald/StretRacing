@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\gameplay\\markupcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\gameplay\\markupcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\gameplay\\playercarsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\gameplay\\playercarsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\choosecar\\choosecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\choosecar\\choosecar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:models\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\scenes\\gameplay\\botcarsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:scenes\\gameplay\\botcarsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\gameplaymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:models\\gameplaymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\carspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:models\\carspecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\transmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:models\\transmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|e:\\.files\\programm\\godot\\streetracing\\stretracing\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE641E4C-3A39-43A8-A458-70618BD8BF79}|Street Racing.csproj|solutionrelative:models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MarkupControl.cs",
-              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\MarkupControl.cs",
-              "RelativeDocumentMoniker": "Scenes\\Gameplay\\MarkupControl.cs",
-              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\MarkupControl.cs",
-              "RelativeToolTip": "Scenes\\Gameplay\\MarkupControl.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBgAAABCAAAA",
+              "Title": "ChooseCar.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\ChooseCar\\ChooseCar.cs",
+              "RelativeDocumentMoniker": "Scenes\\ChooseCar\\ChooseCar.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\ChooseCar\\ChooseCar.cs",
+              "RelativeToolTip": "Scenes\\ChooseCar\\ChooseCar.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwB8AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T14:06:35.139Z",
+              "WhenOpened": "2024-12-29T15:15:37.673Z",
               "EditorCaption": ""
             },
             {
@@ -59,41 +67,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BotCarSprite.cs",
-              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\BotCarSprite.cs",
-              "RelativeDocumentMoniker": "Scenes\\Gameplay\\BotCarSprite.cs",
-              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\BotCarSprite.cs",
-              "RelativeToolTip": "Scenes\\Gameplay\\BotCarSprite.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T14:04:12.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainModel.cs",
-              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\MainModel.cs",
-              "RelativeDocumentMoniker": "Models\\MainModel.cs",
-              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\MainModel.cs",
-              "RelativeToolTip": "Models\\MainModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
+              "Title": "GameplayModel.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\GameplayModel.cs",
+              "RelativeDocumentMoniker": "Models\\GameplayModel.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\GameplayModel.cs",
+              "RelativeToolTip": "Models\\GameplayModel.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA0wBQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:22:50.973Z",
+              "WhenOpened": "2024-12-29T15:13:55.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerCarSprite.cs",
-              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\PlayerCarSprite.cs",
-              "RelativeDocumentMoniker": "Scenes\\Gameplay\\PlayerCarSprite.cs",
-              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Scenes\\Gameplay\\PlayerCarSprite.cs",
-              "RelativeToolTip": "Scenes\\Gameplay\\PlayerCarSprite.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Title": "MainModel.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\MainModel.cs",
+              "RelativeDocumentMoniker": "Models\\MainModel.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\MainModel.cs",
+              "RelativeToolTip": "Models\\MainModel.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAnwBQAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T08:16:04.325Z",
+              "WhenOpened": "2024-12-29T15:08:12.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transmission.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\Transmission.cs",
+              "RelativeDocumentMoniker": "Models\\Transmission.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\Transmission.cs",
+              "RelativeToolTip": "Models\\Transmission.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAvwBgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T14:29:45.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarSpecifications.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\CarSpecifications.cs",
+              "RelativeDocumentMoniker": "Models\\CarSpecifications.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\CarSpecifications.cs",
+              "RelativeToolTip": "Models\\CarSpecifications.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAewBAAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T14:26:22.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Car.cs",
+              "DocumentMoniker": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "Models\\Car.cs",
+              "ToolTip": "E:\\.Files\\Programm\\Godot\\StreetRacing\\StretRacing\\Models\\Car.cs",
+              "RelativeToolTip": "Models\\Car.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAIA9wEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T14:26:25.551Z",
               "EditorCaption": ""
             }
           ]

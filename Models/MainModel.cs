@@ -20,13 +20,13 @@ namespace NewCar.Models
         {
             playerCarsSpecifications = new List<CarSpecifications>();
 
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(200, 6500)));
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 7000)));
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 8000)));
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(200, 6500), 5));
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 7000), 6));
+            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 8000), 5));
 
-            playerCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
-            botCarSpecifications = new CarSpecifications(new EngineSpecifications(300, 7000));
-            gameplayModel = new GameplayModel(playerCarsSpecifications[0], botCarSpecifications, 500);
+            playerCarSpecifications = (CarSpecifications)playerCarsSpecifications[0].Clone();
+            botCarSpecifications = (CarSpecifications)playerCarsSpecifications[1].Clone();
+            gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications, 500);
         }
 
 
