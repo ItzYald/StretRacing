@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/ChooseCar/ChooseCar.cs" id="1_bja7a"]
 [ext_resource type="Script" path="res://Scenes/ChooseCar/ChooseCarButton.cs" id="1_sx754"]
-[ext_resource type="Texture2D" uid="uid://dlwafpoc3hjl6" path="res://Assets/Images/Car1.png" id="3_fc3mb"]
+[ext_resource type="Texture2D" uid="uid://bwimol6ccdhom" path="res://Assets/Images/Car2.png" id="3_tbqfj"]
 
 [node name="ChooseCar" type="Control"]
 layout_mode = 3
@@ -92,7 +92,7 @@ offset_left = 1.0
 offset_top = 1.0
 offset_right = 139.0
 offset_bottom = 19.0
-color = Color(1, 0, 0, 1)
+color = Color(1, 0, 0.6, 1)
 
 [node name="RpmLabel" type="Label" parent="Rectangle/CarSpecifications/VBoxContainer"]
 layout_mode = 2
@@ -109,7 +109,7 @@ offset_left = 1.0
 offset_top = 1.0
 offset_right = 139.0
 offset_bottom = 19.0
-color = Color(1, 0, 0, 1)
+color = Color(1, 0, 0.6, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Rectangle"]
 layout_mode = 0
@@ -117,4 +117,4 @@ offset_left = 120.0
 offset_top = 80.0
 offset_right = 500.0
 offset_bottom = 270.0
-texture = ExtResource("3_fc3mb")
+texture = ExtResource("3_tbqfj")
