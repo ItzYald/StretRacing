@@ -26,7 +26,7 @@ public partial class BotCarSprite : Sprite2D
 
         if (!botCar.IsStarted) return;
 		botCar.Next(delta);
-        if (botCar.getRpm() > botCar.MaxRpm * 0.91)
+        if (botCar.getRpm() > botCar.MaxRpm * 0.95)
         {
             botCar.TransmissionUp();
         }
