@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn7sy43ikid8f"]
+[gd_scene load_steps=16 format=3 uid="uid://cn7sy43ikid8f"]
 
 [ext_resource type="Texture2D" uid="uid://dlwafpoc3hjl6" path="res://Assets/Images/Car1.png" id="1_el5gr"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/PlayerCarSprite.cs" id="1_j27tc"]
@@ -12,6 +12,9 @@
 [ext_resource type="Script" path="res://Scenes/Gameplay/MenuButton.cs" id="9_ieu0x"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/LoseGui.cs" id="9_k0hel"]
 [ext_resource type="Script" path="res://Scenes/Gameplay/RealDistanceLabel.cs" id="10_7w7p6"]
+[ext_resource type="Texture2D" uid="uid://bhbtn2uerbinh" path="res://Assets/Images/Triangle.png" id="12_lqnr4"]
+[ext_resource type="Script" path="res://Scenes/Gameplay/PositionTriangle.cs" id="13_wkbsp"]
+[ext_resource type="Script" path="res://Scenes/Gameplay/NumberOfTransmissionLabel.cs" id="15_t03kf"]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -26,36 +29,6 @@ position = Vector2(250, 300)
 scale = Vector2(4, 4)
 texture = ExtResource("1_el5gr")
 script = ExtResource("3_ctfww")
-
-[node name="SpeedLabel" type="Label" parent="."]
-offset_left = 452.0
-offset_top = 471.0
-offset_right = 625.0
-offset_bottom = 513.0
-scale = Vector2(1, 0.957952)
-theme_override_font_sizes/font_size = 30
-text = "Speed: 100"
-script = ExtResource("3_54oks")
-
-[node name="RpmLabel" type="Label" parent="."]
-offset_left = 100.0
-offset_top = 580.0
-offset_right = 218.0
-offset_bottom = 622.0
-theme_override_font_sizes/font_size = 30
-text = "1000"
-script = ExtResource("4_x3ov0")
-
-[node name="RpmRect" type="ColorRect" parent="RpmLabel"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = -50.0
-offset_right = 260.0
-offset_bottom = -34.0
-rotation = 2.96706
-pivot_offset = Vector2(0, 8)
-color = Color(0.92549, 0, 0, 1)
-script = ExtResource("4_xr315")
 
 [node name="WinGui" type="ColorRect" parent="."]
 visible = false
@@ -92,13 +65,13 @@ vertical_alignment = 1
 [node name="RestartButton" type="Button" parent="WinGui/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Restart"
+text = "Заново"
 script = ExtResource("8_al7xn")
 
 [node name="MenuButton" type="Button" parent="WinGui/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Menu"
+text = "Меню"
 script = ExtResource("9_ieu0x")
 
 [node name="LoseGui" type="ColorRect" parent="."]
@@ -135,7 +108,7 @@ vertical_alignment = 1
 [node name="RestartButton" type="Button" parent="LoseGui/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Рестарт"
+text = "Заново"
 script = ExtResource("8_al7xn")
 
 [node name="MenuButton" type="Button" parent="LoseGui/VBoxContainer"]
@@ -162,6 +135,41 @@ offset_bottom = 40.0
 scale = Vector2(1, 0.518849)
 color = Color(0, 0.192157, 0.247059, 1)
 
+[node name="PositionTriangle" type="Sprite2D" parent="DistanceRect"]
+position = Vector2(0, -16)
+texture = ExtResource("12_lqnr4")
+script = ExtResource("13_wkbsp")
+
+[node name="SpeedLabel" type="Label" parent="."]
+offset_left = 452.0
+offset_top = 471.0
+offset_right = 625.0
+offset_bottom = 513.0
+scale = Vector2(1, 0.957952)
+theme_override_font_sizes/font_size = 30
+text = "Speed: 100"
+script = ExtResource("3_54oks")
+
+[node name="RpmLabel" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 580.0
+offset_right = 218.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 30
+text = "1000"
+script = ExtResource("4_x3ov0")
+
+[node name="RpmRect" type="ColorRect" parent="RpmLabel"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = -50.0
+offset_right = 260.0
+offset_bottom = -34.0
+rotation = 2.96706
+pivot_offset = Vector2(0, 8)
+color = Color(0.92549, 0, 0, 1)
+script = ExtResource("4_xr315")
+
 [node name="RealDistanceLabel" type="Label" parent="."]
 offset_left = 30.0
 offset_top = 10.0
@@ -170,3 +178,12 @@ offset_bottom = 52.0
 theme_override_font_sizes/font_size = 30
 text = "Distance: 1000"
 script = ExtResource("10_7w7p6")
+
+[node name="NumberOfTransmissionLabel" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 620.0
+offset_right = 140.0
+offset_bottom = 662.0
+theme_override_font_sizes/font_size = 30
+text = "2"
+script = ExtResource("15_t03kf")
