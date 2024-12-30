@@ -127,6 +127,7 @@ offset_bottom = 19.0
 color = Color(1, 0, 0.6, 1)
 
 [node name="RatiosRect" type="ColorRect" parent="Rectangle"]
+layout_mode = 0
 offset_left = 44.0
 offset_top = 44.0
 offset_right = 244.0
