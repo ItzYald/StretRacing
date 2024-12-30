@@ -10,6 +10,7 @@ namespace NewCar.Models
     internal static class MainModel
     {
         public static List<CarSpecifications> playerCarsSpecifications;
+        public static List<CarSpecifications> botCarsSpecifications;
 
         public static CarSpecifications playerCarSpecifications;
         public static CarSpecifications botCarSpecifications;
@@ -18,14 +19,22 @@ namespace NewCar.Models
 
         static MainModel()
         {
-            playerCarsSpecifications = new List<CarSpecifications>();
+            playerCarsSpecifications = new List<CarSpecifications>
+            {
+                new CarSpecifications(new EngineSpecifications(200, 6500), 5),
+                new CarSpecifications(new EngineSpecifications(300, 7000), 6),
+                new CarSpecifications(new EngineSpecifications(300, 8000), 5)
+            };
 
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(200, 6500), 5));
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 7000), 6));
-            playerCarsSpecifications.Add(new CarSpecifications(new EngineSpecifications(300, 8000), 5));
+            botCarsSpecifications = new List<CarSpecifications>
+            {
+                new CarSpecifications(new EngineSpecifications(200, 6500), 5),
+                new CarSpecifications(new EngineSpecifications(300, 7000), 6),
+                new CarSpecifications(new EngineSpecifications(300, 8000), 5)
+            };
 
-            playerCarSpecifications = (CarSpecifications)playerCarsSpecifications[0].Clone();
-            botCarSpecifications = (CarSpecifications)playerCarsSpecifications[1].Clone();
+            playerCarSpecifications = playerCarsSpecifications[0];
+            botCarSpecifications = botCarsSpecifications[1];
             gameplayModel = new GameplayModel(playerCarSpecifications, botCarSpecifications, 500);
         }
 

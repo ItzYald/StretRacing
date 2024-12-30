@@ -23,17 +23,17 @@ public partial class ChooseCar : Control
         previousCarButton.Pressed += PreviousCar;
 
         powerRect = GetNode<ColorRect>
-			("Rectangle/CarSpecifications/VBoxContainer/PowerBackground/Power");
+			("Rectangle/CarSpecifications/SpecificationsContainer/PowerBackground/Power");
         powerLabel = GetNode<Label>
-            ("Rectangle/CarSpecifications/VBoxContainer/PowerLabel");
+            ("Rectangle/CarSpecifications/SpecificationsContainer/PowerLabel");
         maxRmpRect = GetNode<ColorRect>
-			("Rectangle/CarSpecifications/VBoxContainer/MaxRpmBackground/MaxRpm");
+			("Rectangle/CarSpecifications/SpecificationsContainer/MaxRpmBackground/MaxRpm");
         maxRmpLabel = GetNode<Label>
-            ("Rectangle/CarSpecifications/VBoxContainer/MaxRpmLabel");
+            ("Rectangle/CarSpecifications/SpecificationsContainer/MaxRpmLabel");
         quantityTransmissionsRect = GetNode<ColorRect>
-			("Rectangle/CarSpecifications/VBoxContainer/QuantityTransmissionsBackground/QuantityTransmissions");
+			("Rectangle/CarSpecifications/SpecificationsContainer/QuantityTransmissionsBackground/QuantityTransmissions");
         quantityTransmissionsLabel = GetNode<Label>
-            ("Rectangle/CarSpecifications/VBoxContainer/QuantityTransmissionsLabel");
+            ("Rectangle/CarSpecifications/SpecificationsContainer/QuantityTransmissionsLabel");
 
     }
 
@@ -44,7 +44,7 @@ public partial class ChooseCar : Control
 		else
 			numberCar += 1;
 		MainModel.gameplayModel.playerCar =
-			new Car((CarSpecifications)MainModel.playerCarsSpecifications[numberCar].Clone());
+			new Car(MainModel.playerCarsSpecifications[numberCar]);
 	}
 
     private void PreviousCar()
@@ -53,7 +53,7 @@ public partial class ChooseCar : Control
 			numberCar = MainModel.playerCarsSpecifications.Count - 1;
 		else
 			numberCar -= 1;
-        MainModel.gameplayModel.playerCar = new Car((CarSpecifications)MainModel.playerCarsSpecifications[numberCar].Clone());
+		MainModel.gameplayModel.playerCar = new Car(MainModel.playerCarsSpecifications[numberCar]);
     }
 
     public override void _Process(double delta)
@@ -63,7 +63,6 @@ public partial class ChooseCar : Control
 
         maxRmpRect.Size = new Vector2(158 / 9000f * MainModel.playerCarsSpecifications[numberCar].engineSpecifications.maxRpm, 18);
 		maxRmpLabel.Text = "MaxRpm: " + MainModel.playerCarsSpecifications[numberCar].engineSpecifications.maxRpm;
-
 
         quantityTransmissionsRect.Size = new Vector2(158 / 7f * MainModel.playerCarsSpecifications[numberCar].transmission.quantity, 18);
         quantityTransmissionsLabel.Text = "Transmissions: " + MainModel.playerCarsSpecifications[numberCar].transmission.quantity;

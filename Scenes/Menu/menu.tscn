@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4siw5ijvtvih"]
+[gd_scene load_steps=4 format=3 uid="uid://4siw5ijvtvih"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/GameplayButton.cs" id="1_m4che"]
 [ext_resource type="Script" path="res://Scenes/Menu/GarageButton.cs" id="2_uvxx5"]
+[ext_resource type="Script" path="res://Scenes/Menu/ExitButton.cs" id="3_fnj1i"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -54,8 +55,9 @@ theme_override_font_sizes/font_size = 30
 text = "Гараж"
 script = ExtResource("2_uvxx5")
 
-[node name="MenuButton" type="Button" parent="Rectangle/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="Rectangle/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Выйти
 "
+script = ExtResource("3_fnj1i")

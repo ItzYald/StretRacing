@@ -14,7 +14,7 @@ namespace NewCar.Models
     {
         Engine engine;
 
-        CarSpecifications specifications;
+        public CarSpecifications specifications;
 
         float distance;
         float speed;
@@ -32,7 +32,7 @@ namespace NewCar.Models
             distance = 0;
             speed = 0;
 
-            this.specifications = specifications;
+            this.specifications = (CarSpecifications)specifications;
 
             engine = new Engine(this.specifications.engineSpecifications, getTransmission);
 
